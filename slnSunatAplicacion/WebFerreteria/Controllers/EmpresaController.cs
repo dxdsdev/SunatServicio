@@ -18,5 +18,15 @@ namespace WebFerreteria.Controllers
 
             return View("index" , vlstEmpresa);
         }
+
+        public ActionResult EditarEmpresa(string pIdEmpresa,string pKey)
+        {
+            List<ObtenerEmpresa_Result> vlstEmpresa = new List<ObtenerEmpresa_Result>();
+            Service1Client objServic = new Service1Client();
+            vlstEmpresa = objServic.ObtenerEmpresa(pIdEmpresa,pKey).ToList();
+
+            return View("EditarEmpresa", vlstEmpresa);
+        }
+
     }
 }
