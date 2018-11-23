@@ -5,7 +5,6 @@
       <xsd:import schemaLocation="http://localhost:51530/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:51530/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:51530/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Sunat_BE" />
-      <xsd:import schemaLocation="http://localhost:51530/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService1_ObtenerListaEmpresas_InputMessage">
@@ -26,6 +25,24 @@
   <wsdl:message name="IService1_ValidarUsuario_OutputMessage">
     <wsdl:part name="parameters" element="tns:ValidarUsuarioResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_AgregarEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AgregarEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditarEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EditarEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminarEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EliminarEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarEmpresaResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="ObtenerListaEmpresas">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerListaEmpresas" message="tns:IService1_ObtenerListaEmpresas_InputMessage" />
@@ -38,6 +55,18 @@
     <wsdl:operation name="ValidarUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/ValidarUsuario" message="tns:IService1_ValidarUsuario_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/ValidarUsuarioResponse" message="tns:IService1_ValidarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AgregarEmpresa" message="tns:IService1_AgregarEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AgregarEmpresaResponse" message="tns:IService1_AgregarEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EditarEmpresa" message="tns:IService1_EditarEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EditarEmpresaResponse" message="tns:IService1_EditarEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EliminarEmpresa" message="tns:IService1_EliminarEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EliminarEmpresaResponse" message="tns:IService1_EliminarEmpresa_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -62,6 +91,33 @@
     </wsdl:operation>
     <wsdl:operation name="ValidarUsuario">
       <soap:operation soapAction="http://tempuri.org/IService1/ValidarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarEmpresa">
+      <soap:operation soapAction="http://tempuri.org/IService1/AgregarEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarEmpresa">
+      <soap:operation soapAction="http://tempuri.org/IService1/EditarEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarEmpresa">
+      <soap:operation soapAction="http://tempuri.org/IService1/EliminarEmpresa" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

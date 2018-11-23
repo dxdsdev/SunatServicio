@@ -11,29 +11,34 @@
     <title>Editar Empresa</title>
 </head>
 <body>
+
     <form>
-        <table>
-            <tr>
-                <td>Empresa</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Nombre</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Llave</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Estado</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><input type="submit"/></td>
-                <td></td>
-            </tr>
-        </table>
+        @foreach (WebFerreteria.SVRsunat.ObtenerEmpresa_Result datosEmpresa in Model)
+        {
+
+            <table>
+                <tr>
+                    <td>Empresa</td>
+                    <td><input id="IdEmpresa" name="IdEmpresa" value="@datosEmpresa.IdEmpresa" type="text" readonly disabled /></td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td><input id="Nombre" name="Nombre" value="@datosEmpresa.Nombre" type="text"  placeholder="Nombre" /></td>
+                </tr>
+                <tr>
+                    <td>Llave</td>
+                    <td><input id="Llave" name="Llave" value="@datosEmpresa.Llave" type="text" placeholder="Llave" /></td>
+                </tr>
+                <tr>
+                    <td>Estado</td>
+                    <td><input id="Estado" name="Estado" value="@datosEmpresa.Estado" type="text" placeholder="Nombre" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Actualizar" /></td>
+                    <td></td>
+                </tr>
+            </table>
+        }
     </form>
 </body>
 </html>

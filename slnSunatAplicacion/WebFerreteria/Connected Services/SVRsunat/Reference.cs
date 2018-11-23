@@ -216,10 +216,28 @@ namespace WebFerreteria.SVRsunat {
         System.Threading.Tasks.Task<WebFerreteria.SVRsunat.ObtenerEmpresa_Result[]> ObtenerEmpresaAsync(string pIdempresa, string pLlave);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ValidarUsuario", ReplyAction="http://tempuri.org/IService1/ValidarUsuarioResponse")]
-        System.Nullable<int>[] ValidarUsuario(string username, string pass);
+        int ValidarUsuario(string username, string pass);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ValidarUsuario", ReplyAction="http://tempuri.org/IService1/ValidarUsuarioResponse")]
-        System.Threading.Tasks.Task<System.Nullable<int>[]> ValidarUsuarioAsync(string username, string pass);
+        System.Threading.Tasks.Task<int> ValidarUsuarioAsync(string username, string pass);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AgregarEmpresa", ReplyAction="http://tempuri.org/IService1/AgregarEmpresaResponse")]
+        string AgregarEmpresa(string pIdEmpresa, string pNombre, string pLlave, int pEstado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AgregarEmpresa", ReplyAction="http://tempuri.org/IService1/AgregarEmpresaResponse")]
+        System.Threading.Tasks.Task<string> AgregarEmpresaAsync(string pIdEmpresa, string pNombre, string pLlave, int pEstado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditarEmpresa", ReplyAction="http://tempuri.org/IService1/EditarEmpresaResponse")]
+        string EditarEmpresa(string pIdEmpresa, string pNombre, string pLlave, int pEstado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EditarEmpresa", ReplyAction="http://tempuri.org/IService1/EditarEmpresaResponse")]
+        System.Threading.Tasks.Task<string> EditarEmpresaAsync(string pIdEmpresa, string pNombre, string pLlave, int pEstado);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EliminarEmpresa", ReplyAction="http://tempuri.org/IService1/EliminarEmpresaResponse")]
+        string EliminarEmpresa(string pIdEmpresa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EliminarEmpresa", ReplyAction="http://tempuri.org/IService1/EliminarEmpresaResponse")]
+        System.Threading.Tasks.Task<string> EliminarEmpresaAsync(string pIdEmpresa);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -265,12 +283,36 @@ namespace WebFerreteria.SVRsunat {
             return base.Channel.ObtenerEmpresaAsync(pIdempresa, pLlave);
         }
         
-        public System.Nullable<int>[] ValidarUsuario(string username, string pass) {
+        public int ValidarUsuario(string username, string pass) {
             return base.Channel.ValidarUsuario(username, pass);
         }
         
-        public System.Threading.Tasks.Task<System.Nullable<int>[]> ValidarUsuarioAsync(string username, string pass) {
+        public System.Threading.Tasks.Task<int> ValidarUsuarioAsync(string username, string pass) {
             return base.Channel.ValidarUsuarioAsync(username, pass);
+        }
+        
+        public string AgregarEmpresa(string pIdEmpresa, string pNombre, string pLlave, int pEstado) {
+            return base.Channel.AgregarEmpresa(pIdEmpresa, pNombre, pLlave, pEstado);
+        }
+        
+        public System.Threading.Tasks.Task<string> AgregarEmpresaAsync(string pIdEmpresa, string pNombre, string pLlave, int pEstado) {
+            return base.Channel.AgregarEmpresaAsync(pIdEmpresa, pNombre, pLlave, pEstado);
+        }
+        
+        public string EditarEmpresa(string pIdEmpresa, string pNombre, string pLlave, int pEstado) {
+            return base.Channel.EditarEmpresa(pIdEmpresa, pNombre, pLlave, pEstado);
+        }
+        
+        public System.Threading.Tasks.Task<string> EditarEmpresaAsync(string pIdEmpresa, string pNombre, string pLlave, int pEstado) {
+            return base.Channel.EditarEmpresaAsync(pIdEmpresa, pNombre, pLlave, pEstado);
+        }
+        
+        public string EliminarEmpresa(string pIdEmpresa) {
+            return base.Channel.EliminarEmpresa(pIdEmpresa);
+        }
+        
+        public System.Threading.Tasks.Task<string> EliminarEmpresaAsync(string pIdEmpresa) {
+            return base.Channel.EliminarEmpresaAsync(pIdEmpresa);
         }
     }
 }

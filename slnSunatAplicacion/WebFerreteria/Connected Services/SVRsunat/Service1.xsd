@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:51530/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Sunat_BE" />
-  <xs:import schemaLocation="http://localhost:51530/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
   <xs:element name="ObtenerListaEmpresas">
     <xs:complexType>
       <xs:sequence />
@@ -40,7 +39,55 @@
   <xs:element name="ValidarUsuarioResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="ValidarUsuarioResult" nillable="true" type="q3:ArrayOfNullableOfint" />
+        <xs:element minOccurs="0" name="ValidarUsuarioResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregarEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pIdEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLlave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pEstado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgregarEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgregarEmpresaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditarEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pIdEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLlave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pEstado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditarEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditarEmpresaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarEmpresa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pIdEmpresa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminarEmpresaResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
