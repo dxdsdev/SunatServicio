@@ -31,6 +31,11 @@ namespace WcfService1SUNAT
 
         [OperationContract]
         string EliminarEmpresa(string pIdEmpresa);
+
+        [OperationContract]
+        string Login(string pUsuario, string pClave,string key);
+
+
     }
 
 

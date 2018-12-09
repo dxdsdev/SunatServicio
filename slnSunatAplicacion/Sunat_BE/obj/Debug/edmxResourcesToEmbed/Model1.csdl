@@ -40,6 +40,17 @@
     <FunctionImport Name="EliminarEmpresa">
       <Parameter Name="Idempresa" Mode="In" Type="String" />
     </FunctionImport>
+    <EntitySet Name="Usuario1" EntityType="BD_Sunat1Model.Usuario1" />
+    <FunctionImport Name="Sp_Login" ReturnType="Collection(Binary)">
+      <Parameter Name="IdUsuario" Mode="In" Type="String" />
+      <Parameter Name="clave" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Login_Token" ReturnType="Collection(String)">
+      <Parameter Name="IdUsuario" Mode="In" Type="String" />
+      <Parameter Name="clave" Mode="In" Type="String" />
+      <Parameter Name="TOKEN" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Token" EntityType="BD_Sunat1Model.Token" />
   </EntityContainer>
   <ComplexType Name="ObtenerEmpresa_Result">
     <Property Type="String" Name="IdEmpresa" Nullable="false" MaxLength="10" />
@@ -73,5 +84,25 @@
     <Property Name="DNI" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
     <Property Name="Pass" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="Estado" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Usuario1">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Nombres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Clave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Token">
+    <Key>
+      <PropertyRef Name="IdToken" />
+    </Key>
+    <Property Name="IdToken" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Token1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FechaUltimaAccion" Type="DateTime" Precision="3" />
+    <Property Name="FechaCaducidad" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

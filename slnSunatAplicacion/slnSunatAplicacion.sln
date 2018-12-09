@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFerreteria", "WebFerrete
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService1SUNAT", "WcfService1SUNAT\WcfService1SUNAT.csproj", "{EC3D4441-58B3-4F55-AF0D-769A09228976}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Criptografia", "Criptografia\Criptografia.csproj", "{B074524C-4AD6-4837-AA3B-664F3EFB5DF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +56,10 @@ Global
 		{EC3D4441-58B3-4F55-AF0D-769A09228976}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC3D4441-58B3-4F55-AF0D-769A09228976}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC3D4441-58B3-4F55-AF0D-769A09228976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B074524C-4AD6-4837-AA3B-664F3EFB5DF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B074524C-4AD6-4837-AA3B-664F3EFB5DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B074524C-4AD6-4837-AA3B-664F3EFB5DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B074524C-4AD6-4837-AA3B-664F3EFB5DF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{03511C51-415F-49E7-B5D6-893F2D0D2C6E} = {E5A7F656-F4DD-4B62-B924-7882047E3A1E}
 		{666D41C4-0FC2-40FE-8F1A-71C2AEAF4F51} = {7C39B9C6-C59D-4F75-BB41-2017A25250B7}
 		{EC3D4441-58B3-4F55-AF0D-769A09228976} = {54725196-B1CD-423F-A5D0-5735950CB5EF}
+		{B074524C-4AD6-4837-AA3B-664F3EFB5DF3} = {E5A7F656-F4DD-4B62-B924-7882047E3A1E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FF96A5B-B940-411C-8371-DB1D132A866E}

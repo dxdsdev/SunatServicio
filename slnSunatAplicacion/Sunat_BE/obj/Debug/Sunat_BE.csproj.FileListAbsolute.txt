@@ -58,3 +58,15 @@ C:\Users\Xen\Desktop\SunatAplicacionCSharp-master\slnSunatAplicacion\Sunat_BE\ob
 C:\Users\Xen\Desktop\SunatAplicacionCSharp-master\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.csproj.CopyComplete
 C:\Users\Xen\Desktop\SunatAplicacionCSharp-master\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.dll
 C:\Users\Xen\Desktop\SunatAplicacionCSharp-master\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.pdb
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\bin\Debug\Sunat_BE.dll.config
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\bin\Debug\Sunat_BE.dll
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\bin\Debug\Sunat_BE.pdb
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\bin\Debug\EntityFramework.dll
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\bin\Debug\EntityFramework.xml
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.csprojAssemblyReference.cache
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.csproj.CoreCompileInputs.cache
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.csproj.CopyComplete
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.dll
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.pdb

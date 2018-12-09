@@ -48,5 +48,29 @@
     <FunctionImportMapping FunctionImportName="AgregarEmpresa" FunctionName="BD_Sunat1Model.Store.AgregarEmpresa" />
     <FunctionImportMapping FunctionImportName="EditarEmpresa" FunctionName="BD_Sunat1Model.Store.EditarEmpresa" />
     <FunctionImportMapping FunctionImportName="EliminarEmpresa" FunctionName="BD_Sunat1Model.Store.EliminarEmpresa" />
+    <EntitySetMapping Name="Usuario1">
+      <EntityTypeMapping TypeName="BD_Sunat1Model.Usuario1">
+        <MappingFragment StoreEntitySet="Usuario1">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Sp_Login" FunctionName="BD_Sunat1Model.Store.Sp_Login" />
+    <FunctionImportMapping FunctionImportName="Sp_Login_Token" FunctionName="BD_Sunat1Model.Store.Sp_Login_Token" />
+    <EntitySetMapping Name="Token">
+      <EntityTypeMapping TypeName="BD_Sunat1Model.Token">
+        <MappingFragment StoreEntitySet="Token">
+          <ScalarProperty Name="FechaCaducidad" ColumnName="FechaCaducidad" />
+          <ScalarProperty Name="FechaUltimaAccion" ColumnName="FechaUltimaAccion" />
+          <ScalarProperty Name="Token1" ColumnName="Token" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdToken" ColumnName="IdToken" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

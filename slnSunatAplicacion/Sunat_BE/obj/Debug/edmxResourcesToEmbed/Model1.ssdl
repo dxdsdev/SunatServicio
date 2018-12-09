@@ -9,6 +9,16 @@
     <Property Name="Llave" Type="varchar" MaxLength="20" />
     <Property Name="Estado" Type="int" />
   </EntityType>
+  <EntityType Name="Token">
+    <Key>
+      <PropertyRef Name="IdToken" />
+    </Key>
+    <Property Name="IdToken" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuario" Type="varchar" MaxLength="20" />
+    <Property Name="Token" Type="varchar" MaxLength="100" />
+    <Property Name="FechaUltimaAccion" Type="datetime" />
+    <Property Name="FechaCaducidad" Type="datetime" />
+  </EntityType>
   <EntityType Name="Usuario">
     <Key>
       <PropertyRef Name="IdUsuario" />
@@ -19,6 +29,16 @@
     <Property Name="Username" Type="varchar" MaxLength="15" />
     <Property Name="DNI" Type="char" MaxLength="8" />
     <Property Name="Pass" Type="varchar" MaxLength="10" />
+    <Property Name="Estado" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario1">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Nombres" Type="varchar" MaxLength="100" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="100" />
+    <Property Name="Clave" Type="varchar" MaxLength="100" />
     <Property Name="Estado" Type="int" />
   </EntityType>
   <Function Name="AgregarEmpresa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -41,12 +61,23 @@
     <Parameter Name="key" Type="varchar" Mode="In" />
   </Function>
   <Function Name="ObtenerEmpresaTodas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Sp_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="varchar" Mode="In" />
+    <Parameter Name="clave" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_Login_Token" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="varchar" Mode="In" />
+    <Parameter Name="clave" Type="varchar" Mode="In" />
+    <Parameter Name="TOKEN" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="ValidarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Username" Type="varchar" Mode="In" />
     <Parameter Name="Pass" Type="varchar" Mode="In" />
   </Function>
   <EntityContainer Name="BD_Sunat1ModelStoreContainer">
     <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Token" EntityType="Self.Token" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario1" EntityType="Self.Usuario1" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

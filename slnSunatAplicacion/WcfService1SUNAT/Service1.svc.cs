@@ -50,5 +50,14 @@ namespace WcfService1SUNAT
             var objBL = new Empresa_BL();
             return objBL.EliminarEmpresa(pIdEmpresa);
         }
+
+        public string Login(string pUsuario, string pClave,string key)
+        {
+            var objAD = new Usuario_BL();
+            return objAD.Login(pUsuario, pClave, key);
+        }
+
+        
+
     }
 }

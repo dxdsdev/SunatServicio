@@ -14,5 +14,15 @@ namespace Sunat_BL
             var objSunat = new Usuario_AD();
             return objSunat.ValidarUsuario(username,pass);
         }
+
+
+        public string Login(string pUsuario, string pClave,string key)
+        {
+            var objSunat = new Usuario_AD();
+            return objSunat.Login(pUsuario, pClave,key);
+        }
+
+
+
     }
 }

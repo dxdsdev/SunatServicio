@@ -118,7 +118,7 @@ where IdEmpresa = @IdEmpresa
 end
 go
 
-s
+
 
 Create procedure EliminarEmpresa
 @Idempresa varchar(10)

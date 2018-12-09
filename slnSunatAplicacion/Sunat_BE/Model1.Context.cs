@@ -39,6 +39,10 @@ public partial class BD_Sunat1Entities : DbContext
 
     public virtual DbSet<Usuario> Usuario { get; set; }
 
+    public virtual DbSet<Usuario1> Usuario1 { get; set; }
+
+    public virtual DbSet<Token> Token { get; set; }
+
 
     public virtual ObjectResult<ObtenerEmpresa_Result> ObtenerEmpresa(string idEmpresa, string key)
     {
@@ -200,6 +204,45 @@ public partial class BD_Sunat1Entities : DbContext
 
 
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("EliminarEmpresa", idempresaParameter);
+    }
+
+
+    public virtual ObjectResult<byte[]> Sp_Login(string idUsuario, string clave)
+    {
+
+        var idUsuarioParameter = idUsuario != null ?
+            new ObjectParameter("IdUsuario", idUsuario) :
+            new ObjectParameter("IdUsuario", typeof(string));
+
+
+        var claveParameter = clave != null ?
+            new ObjectParameter("clave", clave) :
+            new ObjectParameter("clave", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<byte[]>("Sp_Login", idUsuarioParameter, claveParameter);
+    }
+
+
+    public virtual ObjectResult<string> Sp_Login_Token(string idUsuario, string clave, string tOKEN)
+    {
+
+        var idUsuarioParameter = idUsuario != null ?
+            new ObjectParameter("IdUsuario", idUsuario) :
+            new ObjectParameter("IdUsuario", typeof(string));
+
+
+        var claveParameter = clave != null ?
+            new ObjectParameter("clave", clave) :
+            new ObjectParameter("clave", typeof(string));
+
+
+        var tOKENParameter = tOKEN != null ?
+            new ObjectParameter("TOKEN", tOKEN) :
+            new ObjectParameter("TOKEN", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("Sp_Login_Token", idUsuarioParameter, claveParameter, tOKENParameter);
     }
 
 }

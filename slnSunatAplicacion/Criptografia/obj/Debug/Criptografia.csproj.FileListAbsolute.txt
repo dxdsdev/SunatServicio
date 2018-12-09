@@ -1,0 +1,6 @@
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Criptografia\bin\Debug\Criptografia.dll
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Criptografia\bin\Debug\Criptografia.pdb
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Criptografia\obj\Debug\Criptografia.csprojAssemblyReference.cache
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Criptografia\obj\Debug\Criptografia.csproj.CoreCompileInputs.cache
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Criptografia\obj\Debug\Criptografia.dll
+C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Criptografia\obj\Debug\Criptografia.pdb
