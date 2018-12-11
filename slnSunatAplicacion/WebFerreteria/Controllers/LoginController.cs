@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebFerreteria.SRVCriptografia;
+using WebFerreteria.SVRsunat;
+
 
 namespace WebFerreteria.Controllers
 {
@@ -14,7 +17,24 @@ namespace WebFerreteria.Controllers
             return View();
         }
 
-       
+
+        [HttpPost]
+        public ActionResult Ingreso(string idUsuario,string Password)
+        {
+            var objCripto = new CriptografiaClient();
+            string passwordEncriptada = objCripto.Encriptar(Password,"IDAT");
+
+
+            var objServ = new Service1Client();
+            string ptoken = objServ.Login(idUsuario, Password, "IDAT");
+
+            Session.Add("SessionToken", ptoken);
+            Response.Write(Session["SesionToken"].ToString());
+            /*ViewBag.pToken = ptoken;
+            ViewBag.Pass = passwordEncriptada;*/
+            return View();
+        }
+
 
     }
 }

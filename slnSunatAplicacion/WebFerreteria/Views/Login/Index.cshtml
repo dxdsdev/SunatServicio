@@ -9,21 +9,26 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Acceso Al Sistema</title>
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 </head>
 <body>
-
-    <form>
-        <table>
-            <tr>
-                <td>
-                    
-                </td>
-            </tr>
-        </table>
+    <h2>IMGRESO AL SISTEMA</h2>
+    
+    <form action="~/Login/Ingreso" method="post">
+        <div class="form-group">
+            <label for="exampleInputEmail1">E-mail</label>
+            <input type="text" class="form-control" id="idUsuario" name="idUsuario" placeholder="Ingrese email">
+            
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="Password" name="Password" placeholder="IngresePassword">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Ingresar</button>
     </form>
 
-    
-    
+
 </body>
 </html>

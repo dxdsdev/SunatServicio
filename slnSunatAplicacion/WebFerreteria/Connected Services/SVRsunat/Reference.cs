@@ -238,6 +238,12 @@ namespace WebFerreteria.SVRsunat {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/EliminarEmpresa", ReplyAction="http://tempuri.org/IService1/EliminarEmpresaResponse")]
         System.Threading.Tasks.Task<string> EliminarEmpresaAsync(string pIdEmpresa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
+        string Login(string pUsuario, string pClave, string key);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
+        System.Threading.Tasks.Task<string> LoginAsync(string pUsuario, string pClave, string key);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -313,6 +319,14 @@ namespace WebFerreteria.SVRsunat {
         
         public System.Threading.Tasks.Task<string> EliminarEmpresaAsync(string pIdEmpresa) {
             return base.Channel.EliminarEmpresaAsync(pIdEmpresa);
+        }
+        
+        public string Login(string pUsuario, string pClave, string key) {
+            return base.Channel.Login(pUsuario, pClave, key);
+        }
+        
+        public System.Threading.Tasks.Task<string> LoginAsync(string pUsuario, string pClave, string key) {
+            return base.Channel.LoginAsync(pUsuario, pClave, key);
         }
     }
 }

@@ -91,6 +91,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\SRVCriptografia\Criptografia.wsdl" />
+    <None Include="Connected Services\SRVCriptografia\Criptografia.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRVCriptografia\Criptografia1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SRVCriptografia\Criptografia.disco" />
+    <None Include="Connected Services\SRVCriptografia\configuration91.svcinfo" />
+    <None Include="Connected Services\SRVCriptografia\configuration.svcinfo" />
+    <None Include="Connected Services\SRVCriptografia\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Connected Services\SVRsunat\Service1.disco" />
     <None Include="Connected Services\SVRsunat\configuration91.svcinfo" />
     <None Include="Connected Services\SVRsunat\configuration.svcinfo" />
@@ -104,6 +118,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\SRVCriptografia\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\SVRsunat\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,6 +160,7 @@
     <Content Include="Views\Empresa\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Empresa\EditarEmpresa.cshtml" />
+    <Content Include="Views\Login\Ingreso.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -155,6 +175,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SRVCriptografia\" />
     <WCFMetadataStorage Include="Connected Services\SVRsunat\" />
   </ItemGroup>
   <PropertyGroup>
