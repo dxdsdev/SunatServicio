@@ -26,10 +26,11 @@ namespace WebFerreteria.Controllers
 
 
             var objServ = new Service1Client();
-            string ptoken = objServ.Login(idUsuario, Password, "IDAT");
+            string ptoken = objServ.Login(idUsuario, passwordEncriptada, "IDAT");
 
             Session.Add("SessionToken", ptoken);
-            Response.Write(Session["SesionToken"].ToString());
+            Response.Write(Session["SessionToken"].ToString());
+
             /*ViewBag.pToken = ptoken;
             ViewBag.Pass = passwordEncriptada;*/
             return View();
