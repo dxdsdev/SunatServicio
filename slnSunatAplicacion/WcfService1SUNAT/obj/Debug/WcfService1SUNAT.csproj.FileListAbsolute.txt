@@ -120,3 +120,25 @@ C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicac
 C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\WcfService1SUNAT\obj\Debug\WcfService1SUNAT.pdb
 C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\WcfService1SUNAT\bin\Criptografia.dll
 C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\WcfService1SUNAT\bin\Criptografia.pdb
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\WcfService1SUNAT.dll.config
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\WcfService1SUNAT.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\WcfService1SUNAT.pdb
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\EntityFramework.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\EntityFramework.SqlServer.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\Sunat_BE.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\Sunat_BL.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\Sunat_AD.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\Criptografia.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\Sunat_BE.pdb
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\Sunat_BE.dll.config
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\Sunat_BL.pdb
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\EntityFramework.xml
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\EntityFramework.SqlServer.xml
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\Sunat_AD.pdb
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\Sunat_AD.dll.config
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\bin\Criptografia.pdb
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\obj\Debug\WcfService1SUNAT.csprojAssemblyReference.cache
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\obj\Debug\WcfService1SUNAT.csproj.CoreCompileInputs.cache
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\obj\Debug\WcfService1SUNAT.csproj.CopyComplete
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\obj\Debug\WcfService1SUNAT.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WcfService1SUNAT\obj\Debug\WcfService1SUNAT.pdb
