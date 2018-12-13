@@ -14,8 +14,8 @@ namespace WcfService1SUNAT
     // NOTE: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione Service1.svc o Service1.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class Service1 : IService1
     {
-        
-         public List<ObtenerEmpresaTodas_Result> ObtenerListaEmpresas()
+
+        public List<ObtenerEmpresaTodas_Result> ObtenerListaEmpresas()
         {
             var objBL = new Empresa_BL();
             return objBL.ObtenerListaEmpresas();
@@ -30,7 +30,7 @@ namespace WcfService1SUNAT
         public int ValidarUsuario(string username, string pass)
         {
             var objBL = new Usuario_BL();
-            return objBL.ValidarUsuario(username,pass);
+            return objBL.ValidarUsuario(username, pass);
         }
 
         public string AgregarEmpresa(string pIdEmpresa, string pNombre, string pLlave, int pEstado)
@@ -51,13 +51,16 @@ namespace WcfService1SUNAT
             return objBL.EliminarEmpresa(pIdEmpresa);
         }
 
-        public string Login(string pUsuario, string pClave,string key)
+        public string Login(string pUsuario, string pClave, string key)
         {
             var objAD = new Usuario_BL();
             return objAD.Login(pUsuario, pClave, key);
         }
 
-        
+        public ObtenerUsuario_Result ObtenerUsuario(string pIdUsuario){
+            var objBL = new Usuario_BL();
+            return objBL.ObtenerUsuario(pIdUsuario);
+        }
 
     }
 }

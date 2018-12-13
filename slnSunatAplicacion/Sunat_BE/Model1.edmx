@@ -5,15 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="BD_Sunat1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Empresa">
-          <Key>
-            <PropertyRef Name="IdEmpresa" />
-          </Key>
-          <Property Name="IdEmpresa" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="100" />
-          <Property Name="Llave" Type="varchar" MaxLength="20" />
-          <Property Name="Estado" Type="int" />
-        </EntityType>
         <EntityType Name="Token">
           <Key>
             <PropertyRef Name="IdToken" />
@@ -23,18 +14,6 @@
           <Property Name="Token" Type="varchar" MaxLength="100" />
           <Property Name="FechaUltimaAccion" Type="datetime" />
           <Property Name="FechaCaducidad" Type="datetime" />
-        </EntityType>
-        <EntityType Name="Usuario">
-          <Key>
-            <PropertyRef Name="IdUsuario" />
-          </Key>
-          <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nombre" Type="varchar" MaxLength="50" />
-          <Property Name="Apellido" Type="varchar" MaxLength="50" />
-          <Property Name="Username" Type="varchar" MaxLength="15" />
-          <Property Name="DNI" Type="char" MaxLength="8" />
-          <Property Name="Pass" Type="varchar" MaxLength="10" />
-          <Property Name="Estado" Type="int" />
         </EntityType>
         <EntityType Name="Usuario1">
           <Key>
@@ -66,6 +45,9 @@
           <Parameter Name="key" Type="varchar" Mode="In" />
         </Function>
         <Function Name="ObtenerEmpresaTodas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ObtenerUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idUsuario" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="Sp_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IdUsuario" Type="varchar" Mode="In" />
           <Parameter Name="clave" Type="varchar" Mode="In" />
@@ -80,9 +62,7 @@
           <Parameter Name="Pass" Type="varchar" Mode="In" />
         </Function>
         <EntityContainer Name="BD_Sunat1ModelStoreContainer">
-          <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Token" EntityType="Self.Token" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario1" EntityType="Self.Usuario1" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -103,8 +83,6 @@
             <Parameter Name="Username" Mode="In" Type="String" />
             <Parameter Name="Pass" Mode="In" Type="String" />
           </FunctionImport>
-          <EntitySet Name="Empresa" EntityType="BD_Sunat1Model.Empresa" />
-          <EntitySet Name="Usuario" EntityType="BD_Sunat1Model.Usuario" />
           <FunctionImport Name="AgregarEmpresa">
             <Parameter Name="IdEmpresa" Mode="In" Type="String" />
             <Parameter Name="Nombre" Mode="In" Type="String" />
@@ -140,6 +118,9 @@
             <Parameter Name="TOKEN" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="Token" EntityType="BD_Sunat1Model.Token" />
+          <FunctionImport Name="ObtenerUsuario" ReturnType="Collection(BD_Sunat1Model.ObtenerUsuario_Result)">
+            <Parameter Name="idUsuario" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="ObtenerEmpresa_Result">
           <Property Type="String" Name="IdEmpresa" Nullable="false" MaxLength="10" />
@@ -153,27 +134,6 @@
           <Property Type="String" Name="Llave" Nullable="true" MaxLength="20" />
           <Property Type="Int32" Name="Estado" Nullable="true" />
         </ComplexType>
-        <EntityType Name="Empresa">
-          <Key>
-            <PropertyRef Name="IdEmpresa" />
-          </Key>
-          <Property Name="IdEmpresa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Llave" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Estado" Type="Int32" />
-        </EntityType>
-        <EntityType Name="Usuario">
-          <Key>
-            <PropertyRef Name="IdUsuario" />
-          </Key>
-          <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="DNI" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
-          <Property Name="Pass" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Estado" Type="Int32" />
-        </EntityType>
         <EntityType Name="Usuario1">
           <Key>
             <PropertyRef Name="IdUsuario" />
@@ -194,6 +154,12 @@
           <Property Name="FechaUltimaAccion" Type="DateTime" Precision="3" />
           <Property Name="FechaCaducidad" Type="DateTime" Precision="3" />
         </EntityType>
+        <ComplexType Name="ObtenerUsuario_Result">
+          <Property Type="String" Name="IdUsuario" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Nombres" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Apellidos" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="Estado" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -221,29 +187,6 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="ValidarUsuario" FunctionName="BD_Sunat1Model.Store.ValidarUsuario" />
-          <EntitySetMapping Name="Empresa">
-            <EntityTypeMapping TypeName="BD_Sunat1Model.Empresa">
-              <MappingFragment StoreEntitySet="Empresa">
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
-                <ScalarProperty Name="Llave" ColumnName="Llave" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Usuario">
-            <EntityTypeMapping TypeName="BD_Sunat1Model.Usuario">
-              <MappingFragment StoreEntitySet="Usuario">
-                <ScalarProperty Name="Estado" ColumnName="Estado" />
-                <ScalarProperty Name="Pass" ColumnName="Pass" />
-                <ScalarProperty Name="DNI" ColumnName="DNI" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="AgregarEmpresa" FunctionName="BD_Sunat1Model.Store.AgregarEmpresa" />
           <FunctionImportMapping FunctionImportName="EditarEmpresa" FunctionName="BD_Sunat1Model.Store.EditarEmpresa" />
           <FunctionImportMapping FunctionImportName="EliminarEmpresa" FunctionName="BD_Sunat1Model.Store.EliminarEmpresa" />
@@ -271,6 +214,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="ObtenerUsuario" FunctionName="BD_Sunat1Model.Store.ObtenerUsuario">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_Sunat1Model.ObtenerUsuario_Result">
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

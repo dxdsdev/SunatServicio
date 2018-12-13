@@ -22,6 +22,13 @@ namespace Sunat_BL
             return objSunat.Login(pUsuario, pClave,key);
         }
 
+        public ObtenerUsuario_Result ObtenerUsuario(string username)
+        {
+            var objSunat = new Usuario_AD();
+            return objSunat.ObtenerUsuario(username);
+
+        }
+
 
 
     }

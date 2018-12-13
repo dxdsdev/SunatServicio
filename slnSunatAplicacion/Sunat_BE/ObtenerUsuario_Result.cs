@@ -13,22 +13,15 @@ namespace Sunat_BE
 {
 
 using System;
-    using System.Collections.Generic;
     
-public partial class Usuario
+public partial class ObtenerUsuario_Result
 {
 
-    public int IdUsuario { get; set; }
+    public string IdUsuario { get; set; }
 
-    public string Nombre { get; set; }
+    public string Nombres { get; set; }
 
-    public string Apellido { get; set; }
-
-    public string Username { get; set; }
-
-    public string DNI { get; set; }
-
-    public string Pass { get; set; }
+    public string Apellidos { get; set; }
 
     public Nullable<int> Estado { get; set; }
 

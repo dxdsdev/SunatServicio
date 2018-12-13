@@ -90,3 +90,20 @@ C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicac
 C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BL\obj\Debug\Sunat_BL.pdb
 C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BL\bin\Debug\Criptografia.dll
 C:\Users\crowe\Desktop\SunatServicio-master\SunatServicio-master\slnSunatAplicacion\Sunat_BL\bin\Debug\Criptografia.pdb
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\Sunat_BL.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\Sunat_BL.pdb
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\Sunat_AD.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\Sunat_BE.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\Criptografia.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\EntityFramework.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\Sunat_AD.pdb
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\Sunat_AD.dll.config
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\Sunat_BE.pdb
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\Sunat_BE.dll.config
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\Criptografia.pdb
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\bin\Debug\EntityFramework.xml
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\obj\Debug\Sunat_BL.csprojAssemblyReference.cache
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\obj\Debug\Sunat_BL.csproj.CoreCompileInputs.cache
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\obj\Debug\Sunat_BL.csproj.CopyComplete
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\obj\Debug\Sunat_BL.dll
+E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BL\obj\Debug\Sunat_BL.pdb

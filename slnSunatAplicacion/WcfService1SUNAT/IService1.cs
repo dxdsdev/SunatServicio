@@ -35,6 +35,9 @@ namespace WcfService1SUNAT
         [OperationContract]
         string Login(string pUsuario, string pClave,string key);
 
+        [OperationContract]
+        ObtenerUsuario_Result ObtenerUsuario(string pIdUsuario);
+
 
     }
 

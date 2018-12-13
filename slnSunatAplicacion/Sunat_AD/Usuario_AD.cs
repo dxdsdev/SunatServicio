@@ -16,7 +16,14 @@ namespace Sunat_AD
             return Convert.ToInt16(db.ValidarUsuario(username, pass).FirstOrDefault());
         }
 
+        public ObtenerUsuario_Result ObtenerUsuario(string username) {
 
+            var db = new BD_Sunat1Entities();
+
+            return db.ObtenerUsuario(username).FirstOrDefault();
+
+        }
+        
         /*
         public string Login(string pUsuario, string pClave,string pToken)
         {

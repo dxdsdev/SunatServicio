@@ -35,10 +35,6 @@ public partial class BD_Sunat1Entities : DbContext
     }
 
 
-    public virtual DbSet<Empresa> Empresa { get; set; }
-
-    public virtual DbSet<Usuario> Usuario { get; set; }
-
     public virtual DbSet<Usuario1> Usuario1 { get; set; }
 
     public virtual DbSet<Token> Token { get; set; }
@@ -243,6 +239,18 @@ public partial class BD_Sunat1Entities : DbContext
 
 
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("Sp_Login_Token", idUsuarioParameter, claveParameter, tOKENParameter);
+    }
+
+
+    public virtual ObjectResult<ObtenerUsuario_Result> ObtenerUsuario(string idUsuario)
+    {
+
+        var idUsuarioParameter = idUsuario != null ?
+            new ObjectParameter("idUsuario", idUsuario) :
+            new ObjectParameter("idUsuario", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ObtenerUsuario_Result>("ObtenerUsuario", idUsuarioParameter);
     }
 
 }

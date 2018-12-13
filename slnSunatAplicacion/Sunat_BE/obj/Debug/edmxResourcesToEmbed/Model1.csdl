@@ -14,8 +14,6 @@
       <Parameter Name="Username" Mode="In" Type="String" />
       <Parameter Name="Pass" Mode="In" Type="String" />
     </FunctionImport>
-    <EntitySet Name="Empresa" EntityType="BD_Sunat1Model.Empresa" />
-    <EntitySet Name="Usuario" EntityType="BD_Sunat1Model.Usuario" />
     <FunctionImport Name="AgregarEmpresa">
       <Parameter Name="IdEmpresa" Mode="In" Type="String" />
       <Parameter Name="Nombre" Mode="In" Type="String" />
@@ -51,6 +49,9 @@
       <Parameter Name="TOKEN" Mode="In" Type="String" />
     </FunctionImport>
     <EntitySet Name="Token" EntityType="BD_Sunat1Model.Token" />
+    <FunctionImport Name="ObtenerUsuario" ReturnType="Collection(BD_Sunat1Model.ObtenerUsuario_Result)">
+      <Parameter Name="idUsuario" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="ObtenerEmpresa_Result">
     <Property Type="String" Name="IdEmpresa" Nullable="false" MaxLength="10" />
@@ -64,27 +65,6 @@
     <Property Type="String" Name="Llave" Nullable="true" MaxLength="20" />
     <Property Type="Int32" Name="Estado" Nullable="true" />
   </ComplexType>
-  <EntityType Name="Empresa">
-    <Key>
-      <PropertyRef Name="IdEmpresa" />
-    </Key>
-    <Property Name="IdEmpresa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Llave" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="Estado" Type="Int32" />
-  </EntityType>
-  <EntityType Name="Usuario">
-    <Key>
-      <PropertyRef Name="IdUsuario" />
-    </Key>
-    <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-    <Property Name="DNI" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
-    <Property Name="Pass" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="Estado" Type="Int32" />
-  </EntityType>
   <EntityType Name="Usuario1">
     <Key>
       <PropertyRef Name="IdUsuario" />
@@ -105,4 +85,10 @@
     <Property Name="FechaUltimaAccion" Type="DateTime" Precision="3" />
     <Property Name="FechaCaducidad" Type="DateTime" Precision="3" />
   </EntityType>
+  <ComplexType Name="ObtenerUsuario_Result">
+    <Property Type="String" Name="IdUsuario" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Nombres" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Apellidos" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="Estado" Nullable="true" />
+  </ComplexType>
 </Schema>
