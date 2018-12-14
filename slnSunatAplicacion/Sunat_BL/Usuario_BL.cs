@@ -29,6 +29,11 @@ namespace Sunat_BL
 
         }
 
+        public string RegistrarUsuario(string pIdUsuario, string pNombre, string pApellido, string pClave) {
+            var objSunat = new Usuario_AD();
+            return objSunat.RegistrarUsuario(pIdUsuario,pNombre,pApellido,pClave);
+        }
+
 
 
     }

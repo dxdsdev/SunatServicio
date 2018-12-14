@@ -52,6 +52,12 @@
     <FunctionImport Name="ObtenerUsuario" ReturnType="Collection(BD_Sunat1Model.ObtenerUsuario_Result)">
       <Parameter Name="idUsuario" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="RegistrarUsuario">
+      <Parameter Name="IdUsuario" Mode="In" Type="String" />
+      <Parameter Name="Nombres" Mode="In" Type="String" />
+      <Parameter Name="Apellidos" Mode="In" Type="String" />
+      <Parameter Name="Clave" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="ObtenerEmpresa_Result">
     <Property Type="String" Name="IdEmpresa" Nullable="false" MaxLength="10" />

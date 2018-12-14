@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="307db82c655344d4bd7608326d0e864f" Name="Diagram1" >
         <EntityTypeShape EntityType="BD_Sunat1Model.Usuario1" Width="1.5" PointX="7.5" PointY="1" />
-        <EntityTypeShape EntityType="BD_Sunat1Model.Token" Width="1.5" PointX="5.625" PointY="1.25" />
+        <EntityTypeShape EntityType="BD_Sunat1Model.Token" Width="1.5" PointX="5" PointY="0.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

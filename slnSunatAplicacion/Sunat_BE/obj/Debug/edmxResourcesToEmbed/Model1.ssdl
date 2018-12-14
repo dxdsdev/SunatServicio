@@ -43,6 +43,12 @@
   <Function Name="ObtenerUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idUsuario" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="RegistrarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="varchar" Mode="In" />
+    <Parameter Name="Nombres" Type="varchar" Mode="In" />
+    <Parameter Name="Apellidos" Type="varchar" Mode="In" />
+    <Parameter Name="Clave" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="Sp_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="IdUsuario" Type="varchar" Mode="In" />
     <Parameter Name="clave" Type="varchar" Mode="In" />

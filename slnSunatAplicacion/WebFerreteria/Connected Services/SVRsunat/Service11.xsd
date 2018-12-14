@@ -30,4 +30,13 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ObtenerEmpresa_Result" nillable="true" type="tns:ObtenerEmpresa_Result" />
+  <xs:complexType name="ObtenerUsuario_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellidos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombres" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObtenerUsuario_Result" nillable="true" type="tns:ObtenerUsuario_Result" />
 </xs:schema>

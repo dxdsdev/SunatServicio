@@ -59,5 +59,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RegistrarUsuario" FunctionName="BD_Sunat1Model.Store.RegistrarUsuario" />
   </EntityContainerMapping>
 </Mapping>

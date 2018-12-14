@@ -117,6 +117,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\Utilitarios.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Connected Services\SRVCriptografia\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -131,6 +132,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -155,6 +157,9 @@
     <Content Include="Connected Services\SVRsunat\WebFerreteria.SVRsunat.ObtenerEmpresa_Result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\SVRsunat\WebFerreteria.SVRsunat.ObtenerUsuario_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Empresa\Index.cshtml" />
@@ -170,6 +175,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Usuario\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

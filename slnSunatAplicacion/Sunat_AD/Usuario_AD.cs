@@ -66,6 +66,28 @@ namespace Sunat_AD
             }
         }
 
+        public string RegistrarUsuario(string pIdUsuario, string pNombre, string pApellido, string pClave)
+        {
+            Criptografia.Criptografia objCripto = new Criptografia.Criptografia();
+
+
+            int vResult = 0;
+            try
+            {
+
+                var db = new BD_Sunat1Entities();
+                string tclaveEncriptado = objCripto.Encriptar(pClave, "IDAT");
+                vResult = db.RegistrarUsuario(pIdUsuario, pNombre, pApellido, tclaveEncriptado);
+                return "Usuario Registrado";
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message.ToString();
+            }
+
+        }
+
 
 
     }

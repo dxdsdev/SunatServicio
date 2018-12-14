@@ -53,14 +53,21 @@ namespace WcfService1SUNAT
 
         public string Login(string pUsuario, string pClave, string key)
         {
-            var objAD = new Usuario_BL();
-            return objAD.Login(pUsuario, pClave, key);
+            var objBL = new Usuario_BL();
+            return objBL.Login(pUsuario, pClave, key);
         }
 
         public ObtenerUsuario_Result ObtenerUsuario(string pIdUsuario){
             var objBL = new Usuario_BL();
             return objBL.ObtenerUsuario(pIdUsuario);
         }
+
+        public string RegistrarUsuario(string pIdUsuario, string pNombre, string pApellido, string pClave)
+        {
+            var objSunat = new Usuario_BL();
+            return objSunat.RegistrarUsuario(pIdUsuario, pNombre, pApellido, pClave);
+        }
+
 
     }
 }

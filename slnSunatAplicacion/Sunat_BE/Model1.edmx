@@ -48,6 +48,12 @@
         <Function Name="ObtenerUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idUsuario" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="RegistrarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdUsuario" Type="varchar" Mode="In" />
+          <Parameter Name="Nombres" Type="varchar" Mode="In" />
+          <Parameter Name="Apellidos" Type="varchar" Mode="In" />
+          <Parameter Name="Clave" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="Sp_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IdUsuario" Type="varchar" Mode="In" />
           <Parameter Name="clave" Type="varchar" Mode="In" />
@@ -119,7 +125,13 @@
           </FunctionImport>
           <EntitySet Name="Token" EntityType="BD_Sunat1Model.Token" />
           <FunctionImport Name="ObtenerUsuario" ReturnType="Collection(BD_Sunat1Model.ObtenerUsuario_Result)">
-            <Parameter Name="idUsuario" Mode="In" Type="String" />
+          <Parameter Name="idUsuario" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="RegistrarUsuario">
+            <Parameter Name="IdUsuario" Mode="In" Type="String" />
+            <Parameter Name="Nombres" Mode="In" Type="String" />
+            <Parameter Name="Apellidos" Mode="In" Type="String" />
+            <Parameter Name="Clave" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="ObtenerEmpresa_Result">
@@ -224,6 +236,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RegistrarUsuario" FunctionName="BD_Sunat1Model.Store.RegistrarUsuario" />
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

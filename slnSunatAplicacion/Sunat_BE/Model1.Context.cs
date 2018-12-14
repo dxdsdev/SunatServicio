@@ -253,6 +253,33 @@ public partial class BD_Sunat1Entities : DbContext
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ObtenerUsuario_Result>("ObtenerUsuario", idUsuarioParameter);
     }
 
+
+    public virtual int RegistrarUsuario(string idUsuario, string nombres, string apellidos, string clave)
+    {
+
+        var idUsuarioParameter = idUsuario != null ?
+            new ObjectParameter("IdUsuario", idUsuario) :
+            new ObjectParameter("IdUsuario", typeof(string));
+
+
+        var nombresParameter = nombres != null ?
+            new ObjectParameter("Nombres", nombres) :
+            new ObjectParameter("Nombres", typeof(string));
+
+
+        var apellidosParameter = apellidos != null ?
+            new ObjectParameter("Apellidos", apellidos) :
+            new ObjectParameter("Apellidos", typeof(string));
+
+
+        var claveParameter = clave != null ?
+            new ObjectParameter("Clave", clave) :
+            new ObjectParameter("Clave", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("RegistrarUsuario", idUsuarioParameter, nombresParameter, apellidosParameter, claveParameter);
+    }
+
 }
 
 }

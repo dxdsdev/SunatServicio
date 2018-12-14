@@ -199,6 +199,99 @@ namespace WebFerreteria.SVRsunat {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ObtenerUsuario_Result", Namespace="http://schemas.datacontract.org/2004/07/Sunat_BE")]
+    [System.SerializableAttribute()]
+    public partial class ObtenerUsuario_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ApellidosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdUsuarioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombresField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Apellidos {
+            get {
+                return this.ApellidosField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ApellidosField, value) != true)) {
+                    this.ApellidosField = value;
+                    this.RaisePropertyChanged("Apellidos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((this.EstadoField.Equals(value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdUsuario {
+            get {
+                return this.IdUsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdUsuarioField, value) != true)) {
+                    this.IdUsuarioField = value;
+                    this.RaisePropertyChanged("IdUsuario");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombres {
+            get {
+                return this.NombresField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombresField, value) != true)) {
+                    this.NombresField = value;
+                    this.RaisePropertyChanged("Nombres");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SVRsunat.IService1")]
     public interface IService1 {
@@ -244,6 +337,18 @@ namespace WebFerreteria.SVRsunat {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
         System.Threading.Tasks.Task<string> LoginAsync(string pUsuario, string pClave, string key);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ObtenerUsuario", ReplyAction="http://tempuri.org/IService1/ObtenerUsuarioResponse")]
+        WebFerreteria.SVRsunat.ObtenerUsuario_Result ObtenerUsuario(string pIdUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ObtenerUsuario", ReplyAction="http://tempuri.org/IService1/ObtenerUsuarioResponse")]
+        System.Threading.Tasks.Task<WebFerreteria.SVRsunat.ObtenerUsuario_Result> ObtenerUsuarioAsync(string pIdUsuario);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/RegistrarUsuario", ReplyAction="http://tempuri.org/IService1/RegistrarUsuarioResponse")]
+        string RegistrarUsuario(string pIdUsuario, string pNombre, string pApellido, string pClave);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/RegistrarUsuario", ReplyAction="http://tempuri.org/IService1/RegistrarUsuarioResponse")]
+        System.Threading.Tasks.Task<string> RegistrarUsuarioAsync(string pIdUsuario, string pNombre, string pApellido, string pClave);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -327,6 +432,22 @@ namespace WebFerreteria.SVRsunat {
         
         public System.Threading.Tasks.Task<string> LoginAsync(string pUsuario, string pClave, string key) {
             return base.Channel.LoginAsync(pUsuario, pClave, key);
+        }
+        
+        public WebFerreteria.SVRsunat.ObtenerUsuario_Result ObtenerUsuario(string pIdUsuario) {
+            return base.Channel.ObtenerUsuario(pIdUsuario);
+        }
+        
+        public System.Threading.Tasks.Task<WebFerreteria.SVRsunat.ObtenerUsuario_Result> ObtenerUsuarioAsync(string pIdUsuario) {
+            return base.Channel.ObtenerUsuarioAsync(pIdUsuario);
+        }
+        
+        public string RegistrarUsuario(string pIdUsuario, string pNombre, string pApellido, string pClave) {
+            return base.Channel.RegistrarUsuario(pIdUsuario, pNombre, pApellido, pClave);
+        }
+        
+        public System.Threading.Tasks.Task<string> RegistrarUsuarioAsync(string pIdUsuario, string pNombre, string pApellido, string pClave) {
+            return base.Channel.RegistrarUsuarioAsync(pIdUsuario, pNombre, pApellido, pClave);
         }
     }
 }

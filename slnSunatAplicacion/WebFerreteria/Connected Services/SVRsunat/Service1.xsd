@@ -107,4 +107,35 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ObtenerUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pIdUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Sunat_BE" minOccurs="0" name="ObtenerUsuarioResult" nillable="true" type="q3:ObtenerUsuario_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pIdUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClave" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrarUsuarioResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
