@@ -10,3 +10,9 @@ E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Criptografia\obj\Debug\Crip
 E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Criptografia\obj\Debug\Criptografia.csproj.CoreCompileInputs.cache
 E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Criptografia\obj\Debug\Criptografia.dll
 E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Criptografia\obj\Debug\Criptografia.pdb
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Criptografia\bin\Debug\Criptografia.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Criptografia\bin\Debug\Criptografia.pdb
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Criptografia\obj\Debug\Criptografia.csprojAssemblyReference.cache
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Criptografia\obj\Debug\Criptografia.csproj.CoreCompileInputs.cache
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Criptografia\obj\Debug\Criptografia.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Criptografia\obj\Debug\Criptografia.pdb

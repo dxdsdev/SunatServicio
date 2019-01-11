@@ -82,3 +82,15 @@ E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE
 E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.csproj.CopyComplete
 E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.dll
 E:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.pdb
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\bin\Debug\Sunat_BE.dll.config
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\bin\Debug\Sunat_BE.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\bin\Debug\Sunat_BE.pdb
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\bin\Debug\EntityFramework.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\bin\Debug\EntityFramework.SqlServer.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\bin\Debug\EntityFramework.xml
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\bin\Debug\EntityFramework.SqlServer.xml
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.csprojAssemblyReference.cache
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.csproj.CoreCompileInputs.cache
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.csproj.CopyComplete
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Sunat_BE\obj\Debug\Sunat_BE.pdb

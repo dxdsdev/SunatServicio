@@ -1,0 +1,12 @@
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\bin\Debug\Ferreteria_BE.dll.config
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\bin\Debug\Ferreteria_BE.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\bin\Debug\Ferreteria_BE.pdb
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\bin\Debug\EntityFramework.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\bin\Debug\EntityFramework.SqlServer.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\bin\Debug\EntityFramework.xml
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\bin\Debug\EntityFramework.SqlServer.xml
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\obj\Debug\Ferreteria_BE.csprojAssemblyReference.cache
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\obj\Debug\Ferreteria_BE.csproj.CoreCompileInputs.cache
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\obj\Debug\Ferreteria_BE.csproj.CopyComplete
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\obj\Debug\Ferreteria_BE.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BE\obj\Debug\Ferreteria_BE.pdb

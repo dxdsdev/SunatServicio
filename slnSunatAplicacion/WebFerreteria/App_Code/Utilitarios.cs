@@ -12,7 +12,7 @@ namespace WebFerreteria.App_Code
         }
 
         public string ObtenerLlave() {
-
+            return null;
         }
 
     }

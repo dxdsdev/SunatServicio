@@ -1,0 +1,6 @@
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BL\bin\Debug\Ferreteria_BL.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BL\bin\Debug\Ferreteria_BL.pdb
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BL\obj\Debug\Ferreteria_BL.csprojAssemblyReference.cache
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BL\obj\Debug\Ferreteria_BL.csproj.CoreCompileInputs.cache
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BL\obj\Debug\Ferreteria_BL.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\Ferreteria_BL\obj\Debug\Ferreteria_BL.pdb

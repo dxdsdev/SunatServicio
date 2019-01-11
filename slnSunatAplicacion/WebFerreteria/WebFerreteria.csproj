@@ -176,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="LogFerreteria\" />
     <Folder Include="Views\Usuario\" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +185,16 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\SRVCriptografia\" />
     <WCFMetadataStorage Include="Connected Services\SVRsunat\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ferreteria_BE\Ferreteria_BE.csproj">
+      <Project>{bc1fbf26-4329-42bc-ae24-38abd4aa1362}</Project>
+      <Name>Ferreteria_BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ferreteria_BL\Ferreteria_BL.csproj">
+      <Project>{8957b1d3-c745-46ad-b0ac-3fe92a9034ec}</Project>
+      <Name>Ferreteria_BL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
