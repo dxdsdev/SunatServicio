@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\Utilitarios.cs" />
+    <Content Include="App_Code\LogTxT.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Connected Services\SRVCriptografia\Reference.cs">
       <AutoGen>True</AutoGen>
