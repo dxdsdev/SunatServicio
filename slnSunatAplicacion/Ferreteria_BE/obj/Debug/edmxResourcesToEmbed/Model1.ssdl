@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BD_FerreteriaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="BD_FerreteriaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BD_Ferreteria.dbo.Producto' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="TipoProducto" Type="int" />
+    <Property Name="Estado" Type="int" />
+  </EntityType>
   <Function Name="Usp_AdministrarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="IdProducto" Type="int" Mode="In" />
     <Parameter Name="Descripcion" Type="varchar" Mode="In" />
@@ -7,5 +18,15 @@
     <Parameter Name="Estado" Type="int" Mode="In" />
     <Parameter Name="Usuario" Type="varchar" Mode="In" />
   </Function>
-  <EntityContainer Name="BD_FerreteriaModelStoreContainer" />
+  <Function Name="Usp_ObtenerProductos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="BD_FerreteriaModelStoreContainer">
+    <EntitySet Name="Producto" EntityType="Self.Producto" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Producto].[id] AS [id], 
+    [Producto].[Descripcion] AS [Descripcion], 
+    [Producto].[TipoProducto] AS [TipoProducto], 
+    [Producto].[Estado] AS [Estado]
+    FROM [dbo].[Producto] AS [Producto]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
 </Schema>

@@ -1,6 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="BD_FerreteriaModelStoreContainer" CdmEntityContainer="BD_FerreteriaEntities">
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="BD_FerreteriaModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoProducto" ColumnName="TipoProducto" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="Usp_AdministrarProducto" FunctionName="BD_FerreteriaModel.Store.Usp_AdministrarProducto" />
+    <FunctionImportMapping FunctionImportName="Usp_ObtenerProductos" FunctionName="BD_FerreteriaModel.Store.Usp_ObtenerProductos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_FerreteriaModel.Usp_ObtenerProductos_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoProducto" ColumnName="TipoProducto" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

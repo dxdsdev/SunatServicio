@@ -4,7 +4,18 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BD_FerreteriaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="BD_FerreteriaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BD_Ferreteria.dbo.Producto' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Producto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="TipoProducto" Type="int" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
         <Function Name="Usp_AdministrarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IdProducto" Type="int" Mode="In" />
           <Parameter Name="Descripcion" Type="varchar" Mode="In" />
@@ -12,13 +23,33 @@
           <Parameter Name="Estado" Type="int" Mode="In" />
           <Parameter Name="Usuario" Type="varchar" Mode="In" />
         </Function>
-        <EntityContainer Name="BD_FerreteriaModelStoreContainer" />
+        <Function Name="Usp_ObtenerProductos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="BD_FerreteriaModelStoreContainer">
+          <EntitySet Name="Producto" EntityType="Self.Producto" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Producto].[id] AS [id], 
+    [Producto].[Descripcion] AS [Descripcion], 
+    [Producto].[TipoProducto] AS [TipoProducto], 
+    [Producto].[Estado] AS [Estado]
+    FROM [dbo].[Producto] AS [Producto]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BD_FerreteriaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="BD_FerreteriaEntities" annotation:LazyLoadingEnabled="true" >
+        <EntityType Name="Producto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TipoProducto" Type="Int32" />
+          <Property Name="Estado" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="BD_FerreteriaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Producto" EntityType="Self.Producto" />
           <FunctionImport Name="Usp_AdministrarProducto">
             <Parameter Name="IdProducto" Mode="In" Type="Int32" />
             <Parameter Name="Descripcion" Mode="In" Type="String" />
@@ -26,14 +57,41 @@
             <Parameter Name="Estado" Mode="In" Type="Int32" />
             <Parameter Name="Usuario" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="Usp_ObtenerProductos" ReturnType="Collection(BD_FerreteriaModel.Usp_ObtenerProductos_Result)" />
         </EntityContainer>
+        <ComplexType Name="Usp_ObtenerProductos_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="TipoProducto" Nullable="true" />
+          <Property Type="Int32" Name="Estado" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BD_FerreteriaModelStoreContainer" CdmEntityContainer="BD_FerreteriaEntities" >
+        <EntityContainerMapping StorageEntityContainer="BD_FerreteriaModelStoreContainer" CdmEntityContainer="BD_FerreteriaEntities">
+          <EntitySetMapping Name="Producto">
+            <EntityTypeMapping TypeName="BD_FerreteriaModel.Producto">
+              <MappingFragment StoreEntitySet="Producto">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="TipoProducto" ColumnName="TipoProducto" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="Usp_AdministrarProducto" FunctionName="BD_FerreteriaModel.Store.Usp_AdministrarProducto" />
+          <FunctionImportMapping FunctionImportName="Usp_ObtenerProductos" FunctionName="BD_FerreteriaModel.Store.Usp_ObtenerProductos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_FerreteriaModel.Usp_ObtenerProductos_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="TipoProducto" ColumnName="TipoProducto" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

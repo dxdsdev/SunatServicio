@@ -27,6 +27,7 @@ namespace Ferreteria_BE
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Producto> Producto { get; set; }
     
         public virtual int Usp_AdministrarProducto(Nullable<int> idProducto, string descripcion, Nullable<int> tipoProducto, Nullable<int> estado, string usuario)
         {
@@ -51,6 +52,11 @@ namespace Ferreteria_BE
                 new ObjectParameter("Usuario", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Usp_AdministrarProducto", idProductoParameter, descripcionParameter, tipoProductoParameter, estadoParameter, usuarioParameter);
+        }
+    
+        public virtual ObjectResult<Usp_ObtenerProductos_Result> Usp_ObtenerProductos()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_ObtenerProductos_Result>("Usp_ObtenerProductos");
         }
     }
 }

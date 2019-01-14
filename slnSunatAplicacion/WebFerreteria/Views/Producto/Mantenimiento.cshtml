@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Mantenimiento</title>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Codigo</td>
+                <td>Descripcion</td>
+                <td>Tipo</td>
+                <td>Estado</td>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (Ferreteria_BE.Usp_ObtenerProductos_Result datosProducto in Model)
+            {
+
+                <tr>
+                    <td>@datosProducto.Id</td>
+                    <td>@datosProducto.Descripcion</td>
+                    <td>@datosProducto.TipoProducto</td>
+                    @switch (datosProducto.Estado)
+                    {
+                        case 1:
+                            <td>activo</td> break;
+                        case 2:
+                            <td>pendiente</td> break;
+                        case 3:
+                            <td>otro</td>break;
+                    }
+                    <td>
+                        @Html.ActionLink("editar", "EditarProducto", "Producto", new { pIdEmpresa = datosProducto.Id}, null)
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+    <form action="/" method="post">
+
+    </form>
+</body>
+</html>

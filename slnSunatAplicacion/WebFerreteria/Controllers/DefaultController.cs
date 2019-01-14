@@ -20,5 +20,8 @@ namespace WebFerreteria.Controllers
             obj.Edad = 19;
             return View("Index", obj);
         }
+
+
+
     }
 }

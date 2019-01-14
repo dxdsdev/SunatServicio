@@ -14,10 +14,7 @@ namespace WebFerreteria.App_Code
             var pathLog =(ConfigurationManager.AppSettings["LOG_DIR"]);
             var pathFichero = ConfigurationManager.AppSettings["LOG_DIR_ARCHIVO"];
 
-            
-            
-
-            return pathFicheroc;
+            return pathFichero;
         }
     }
 }

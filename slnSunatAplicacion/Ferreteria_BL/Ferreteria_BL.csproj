@@ -43,7 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LogTxT.cs" />
+    <Compile Include="Producto_BL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ferreteria_AD\Ferreteria_AD.csproj">
+      <Project>{9be74e7f-b70e-4b57-970c-c4ee4217c8a2}</Project>
+      <Name>Ferreteria_AD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ferreteria_BE\Ferreteria_BE.csproj">
+      <Project>{bc1fbf26-4329-42bc-ae24-38abd4aa1362}</Project>
+      <Name>Ferreteria_BE</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

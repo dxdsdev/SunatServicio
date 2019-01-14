@@ -28,5 +28,11 @@ namespace Ferreteria_AD
                 return ex.Message.ToString();
             }
         }
+
+        public List<Usp_ObtenerProductos_Result> ObtenerProductos() {
+            var bd = new BD_FerreteriaEntities();
+            return bd.Usp_ObtenerProductos().ToList();
+        }
+
     }
 }

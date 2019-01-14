@@ -1,6 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="BD_FerreteriaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TipoProducto" Type="Int32" />
+    <Property Name="Estado" Type="Int32" />
+  </EntityType>
   <EntityContainer Name="BD_FerreteriaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Producto" EntityType="Self.Producto" />
     <FunctionImport Name="Usp_AdministrarProducto">
       <Parameter Name="IdProducto" Mode="In" Type="Int32" />
       <Parameter Name="Descripcion" Mode="In" Type="String" />
@@ -8,5 +18,12 @@
       <Parameter Name="Estado" Mode="In" Type="Int32" />
       <Parameter Name="Usuario" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="Usp_ObtenerProductos" ReturnType="Collection(BD_FerreteriaModel.Usp_ObtenerProductos_Result)" />
   </EntityContainer>
+  <ComplexType Name="Usp_ObtenerProductos_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="TipoProducto" Nullable="true" />
+    <Property Type="Int32" Name="Estado" Nullable="true" />
+  </ComplexType>
 </Schema>
