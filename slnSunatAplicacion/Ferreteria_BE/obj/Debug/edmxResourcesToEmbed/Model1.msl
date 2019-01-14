@@ -22,5 +22,15 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_ObtenerProductoById" FunctionName="BD_FerreteriaModel.Store.Usp_ObtenerProductoById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_FerreteriaModel.Usp_ObtenerProductoById_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoProducto" ColumnName="TipoProducto" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

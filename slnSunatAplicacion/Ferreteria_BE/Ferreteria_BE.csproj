@@ -69,6 +69,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usp_ObtenerProductoById_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Usp_ObtenerProductos_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

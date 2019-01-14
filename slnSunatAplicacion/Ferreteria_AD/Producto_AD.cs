@@ -34,5 +34,12 @@ namespace Ferreteria_AD
             return bd.Usp_ObtenerProductos().ToList();
         }
 
+
+        public List<Usp_ObtenerProductoById_Result> ObtenerProductosById(int pId)
+        {
+            var bd = new BD_FerreteriaEntities();
+            return bd.Usp_ObtenerProductoById(pId).ToList();
+        }
+
     }
 }

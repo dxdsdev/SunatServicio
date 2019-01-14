@@ -21,11 +21,11 @@ namespace WebFerreteria.Controllers
 
         }
 
-        public ActionResult EditarProducto(string pId)
+        public ActionResult EditarProducto(int pId)
         {
-            List<Usp_ObtenerProductos_Result> vlstProducto = new List<Usp_ObtenerProductos_Result>();
+            List<Usp_ObtenerProductoById_Result> vlstProducto = new List<Usp_ObtenerProductoById_Result>();
             var objBL = new Ferreteria_BL.Producto_BL();
-            vlstProducto = objBL.ObtenerProductos().ToList();
+            vlstProducto = objBL.ObtenerProductosById(pId).ToList();
 
             return View("EditarProducto", vlstProducto);
         }

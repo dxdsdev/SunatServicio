@@ -19,8 +19,17 @@
       <Parameter Name="Usuario" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="Usp_ObtenerProductos" ReturnType="Collection(BD_FerreteriaModel.Usp_ObtenerProductos_Result)" />
+    <FunctionImport Name="Usp_ObtenerProductoById" ReturnType="Collection(BD_FerreteriaModel.Usp_ObtenerProductoById_Result)">
+      <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="Usp_ObtenerProductos_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="TipoProducto" Nullable="true" />
+    <Property Type="Int32" Name="Estado" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Usp_ObtenerProductoById_Result">
     <Property Type="Int32" Name="Id" Nullable="false" />
     <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
     <Property Type="Int32" Name="TipoProducto" Nullable="true" />

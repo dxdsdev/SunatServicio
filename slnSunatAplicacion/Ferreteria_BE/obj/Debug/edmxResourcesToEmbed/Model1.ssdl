@@ -18,6 +18,9 @@ warning 6002: The table/view 'BD_Ferreteria.dbo.Producto' does not have a primar
     <Parameter Name="Estado" Type="int" Mode="In" />
     <Parameter Name="Usuario" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="Usp_ObtenerProductoById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProducto" Type="int" Mode="In" />
+  </Function>
   <Function Name="Usp_ObtenerProductos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="BD_FerreteriaModelStoreContainer">
     <EntitySet Name="Producto" EntityType="Self.Producto" store:Type="Tables" store:Schema="dbo">

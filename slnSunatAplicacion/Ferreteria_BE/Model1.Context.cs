@@ -58,5 +58,14 @@ namespace Ferreteria_BE
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_ObtenerProductos_Result>("Usp_ObtenerProductos");
         }
+    
+        public virtual ObjectResult<Usp_ObtenerProductoById_Result> Usp_ObtenerProductoById(Nullable<int> idProducto)
+        {
+            var idProductoParameter = idProducto.HasValue ?
+                new ObjectParameter("IdProducto", idProducto) :
+                new ObjectParameter("IdProducto", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_ObtenerProductoById_Result>("Usp_ObtenerProductoById", idProductoParameter);
+        }
     }
 }

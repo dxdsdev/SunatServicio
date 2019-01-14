@@ -21,5 +21,11 @@ namespace Ferreteria_BL
             var objAD = new Producto_AD();
             return objAD.ObtenerProductos();
         }
+
+        public List<Usp_ObtenerProductoById_Result> ObtenerProductosById(int pId)
+        {
+            var objAD = new Producto_AD();
+            return objAD.ObtenerProductosById(pId);
+        }
     }
 }

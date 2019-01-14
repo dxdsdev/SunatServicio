@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BD_FerreteriaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BD_FerreteriaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6002: The table/view 'BD_Ferreteria.dbo.Producto' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Producto">
@@ -23,6 +23,9 @@ warning 6002: The table/view 'BD_Ferreteria.dbo.Producto' does not have a primar
           <Parameter Name="Estado" Type="int" Mode="In" />
           <Parameter Name="Usuario" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="Usp_ObtenerProductoById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdProducto" Type="int" Mode="In" />
+        </Function>
         <Function Name="Usp_ObtenerProductos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="BD_FerreteriaModelStoreContainer">
           <EntitySet Name="Producto" EntityType="Self.Producto" store:Type="Tables" store:Schema="dbo">
@@ -34,8 +37,7 @@ warning 6002: The table/view 'BD_Ferreteria.dbo.Producto' does not have a primar
     FROM [dbo].[Producto] AS [Producto]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BD_FerreteriaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -58,8 +60,17 @@ warning 6002: The table/view 'BD_Ferreteria.dbo.Producto' does not have a primar
             <Parameter Name="Usuario" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="Usp_ObtenerProductos" ReturnType="Collection(BD_FerreteriaModel.Usp_ObtenerProductos_Result)" />
+          <FunctionImport Name="Usp_ObtenerProductoById" ReturnType="Collection(BD_FerreteriaModel.Usp_ObtenerProductoById_Result)">
+            <Parameter Name="IdProducto" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="Usp_ObtenerProductos_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="TipoProducto" Nullable="true" />
+          <Property Type="Int32" Name="Estado" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Usp_ObtenerProductoById_Result">
           <Property Type="Int32" Name="Id" Nullable="false" />
           <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
           <Property Type="Int32" Name="TipoProducto" Nullable="true" />
@@ -85,6 +96,16 @@ warning 6002: The table/view 'BD_Ferreteria.dbo.Producto' does not have a primar
           <FunctionImportMapping FunctionImportName="Usp_ObtenerProductos" FunctionName="BD_FerreteriaModel.Store.Usp_ObtenerProductos">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BD_FerreteriaModel.Usp_ObtenerProductos_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="TipoProducto" ColumnName="TipoProducto" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Usp_ObtenerProductoById" FunctionName="BD_FerreteriaModel.Store.Usp_ObtenerProductoById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_FerreteriaModel.Usp_ObtenerProductoById_Result">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
                 <ScalarProperty Name="TipoProducto" ColumnName="TipoProducto" />
