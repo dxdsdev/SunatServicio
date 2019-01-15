@@ -18,10 +18,7 @@ namespace Ferreteria_BL
             {
                 string vCarpetaLog =
                 ConfigurationManager.AppSettings["RutaLog"].ToString();
-                vFichero = string.Concat(vCarpetaLog,
-                    ConfigurationManager.AppSettings["NombreArchivoLog"]
-                    .ToString()
-                    );
+                vFichero = string.Concat(vCarpetaLog,ConfigurationManager.AppSettings["NombreArchivoLog"].ToString(),"_",DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
                 string vretorno = string.Empty;
                 if (File.Exists(vFichero))
                 {

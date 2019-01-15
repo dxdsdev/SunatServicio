@@ -11,12 +11,35 @@
     <title>EditarProducto</title>
 </head>
 <body>
-    <div> 
-        <h1>Dani Eres un Capo :3
-        
-        
-        </h1>
-    </div>
-    <small>irene se la come :v</small>
+
+    <form method="post" action="~/Producto/Administrar">
+        @foreach (Ferreteria_BE.Usp_ObtenerProductoById_Result datosProducto in Model)
+        {
+
+            <table>
+                <tr>
+                    <td>Id</td>
+                    <td><input id="Id" name="Id" value="@datosProducto.Id" type="text" readonly  /></td>
+                </tr>
+                <tr>
+                    <td>Producto</td>
+                    <td><input id="Descripcion" name="Descripcion" value="@datosProducto.Descripcion" type="text" placeholder="Descripcion" /></td>
+                </tr>
+                <tr>
+                    <td>TipoProducto</td>
+                    <td><input id="TipoProducto" name="TipoProducto" value="@datosProducto.TipoProducto" type="text" placeholder="Tipo" /></td>
+                </tr>
+                <tr>
+                    <td>Estado</td>
+                    <td><input id="Estado" name="Estado" value="@datosProducto.Estado" type="text" placeholder="Estado" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Actualizar" /></td>
+                    <td></td>
+                </tr>
+            </table>
+        }
+    </form>
+
 </body>
 </html>

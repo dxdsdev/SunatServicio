@@ -29,5 +29,19 @@ namespace WebFerreteria.Controllers
 
             return View("EditarProducto", vlstProducto);
         }
+
+        [HttpPost]
+        public ActionResult Administrar(string Id, string Descripcion, string TipoProducto, string Estado)
+        {
+            var objBL = new Ferreteria_BL.Producto_BL();
+            
+            string mensaje=objBL.AdministrarProducto(Convert.ToInt32(Id), Descripcion, Convert.ToInt32(TipoProducto), Convert.ToInt32(Estado), "croweloper");
+            
+            
+
+            Response.Redirect("~/Producto/Mantenimiento?"+ Id);
+
+            return View();
+        }
     }
 }
