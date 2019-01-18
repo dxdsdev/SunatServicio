@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Mantenimiento</title>
+</head>
+<body>
+    <h1>NO SOY IGUAL</h1>
+    <h2>Listado de Usuario</h2>
+    <table border="1">
+
+
+        <thead>
+            <tr>
+                <td>IDUSUARIO</td>
+                <td>NOMBRE</td>
+                <td>APELLIDO</td>
+                <td>PUESTO</td>
+                <td>ESTADO</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (Login_BE.usp_ListarUsuarios_Result datosUsuario in Model)
+            {
+
+                <tr>
+                    <td>@datosUsuario.idUsuario</td>
+                    <td>@datosUsuario.Nombre</td>
+                    <td>@datosUsuario.Apellido</td>
+                    <td>@datosUsuario.Puesto</td>
+                    @switch (datosUsuario.Estado)
+                    {
+                        case 1:
+                            <td>Activo</td> break;
+                        case 0:
+                            <td>Inactivo</td>break;
+
+                    }
+                    <td>
+                        @Html.ActionLink("Editar Usuario", "ActualizarUsuario", "Usuario", new { pId = datosUsuario.idUsuario }, null)
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+
+    </table>
+    <a href="~/Usuario/IngresarUsuario">Agregar Usuario</a>
+</body>
+</html>

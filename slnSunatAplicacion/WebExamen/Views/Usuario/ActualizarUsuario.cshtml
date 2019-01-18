@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ActualizarUsuario</title>
+</head>
+<body>
+
+    <h2>Actualizar Alumno</h2>
+    <form method="post" action="~/Usuario/Administrar">
+        @foreach (Login_BE.usp_Listarusuario_Result datosUsuario in Model)
+        {
+
+        <table>
+            <tr>
+                <td>IDUSUARIO</td>
+                <td><input id="idusuario" name="idusuario" value="@datosUsuario.idUsuario" type="text" readonly /></td>
+            </tr>
+            <tr>
+                <td>NOMBRE</td>
+                <td><input id="nombre" name="nombre" value="@datosUsuario.Nombre" type="text" placeholder="Nombre" /></td>
+            </tr>
+            <tr>
+                <td>APELLIDO</td>
+                <td><input id="apellido" name="apellido" value="@datosUsuario.Apellido" type="text" placeholder="Apellido" /></td>
+            </tr>
+            <tr>
+                <td>PUESTO</td>
+                <td><input id="puesto" name="puesto" value="@datosUsuario.Puesto" type="text" placeholder="Puesto" /></td>
+            </tr>
+
+            <tr>
+                <td>ESTADO</td>
+                <td><input id="estado" name="estado" value="@datosUsuario.Estado" type="text" placeholder="Estado" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Actualizar" /></td>
+                <td></td>
+            </tr>
+        </table>
+        }
+
+    </form>
+</body>
+</html>

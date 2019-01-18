@@ -626,3 +626,11 @@ D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\Ferreteri
 D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\Ferreteria_AD.dll.config
 D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\EntityFramework.SqlServer.dll
 D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\EntityFramework.SqlServer.xml
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\Newtonsoft.Json.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\System.Net.Http.Formatting.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\System.Web.Http.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\System.Web.Http.WebHost.dll
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\Newtonsoft.Json.xml
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\System.Net.Http.Formatting.xml
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\System.Web.Http.xml
+D:\Proyectos GitHub\SunatServicio\slnSunatAplicacion\WebFerreteria\bin\System.Web.Http.WebHost.xml

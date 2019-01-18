@@ -22,6 +22,7 @@
     <FunctionImport Name="Usp_ObtenerProductoById" ReturnType="Collection(BD_FerreteriaModel.Usp_ObtenerProductoById_Result)">
       <Parameter Name="IdProducto" Mode="In" Type="Int32" />
     </FunctionImport>
+    <EntitySet Name="sysdiagrams" EntityType="BD_FerreteriaModel.sysdiagrams" />
   </EntityContainer>
   <ComplexType Name="Usp_ObtenerProductos_Result">
     <Property Type="Int32" Name="Id" Nullable="false" />
@@ -35,4 +36,14 @@
     <Property Type="Int32" Name="TipoProducto" Nullable="true" />
     <Property Type="Int32" Name="Estado" Nullable="true" />
   </ComplexType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>

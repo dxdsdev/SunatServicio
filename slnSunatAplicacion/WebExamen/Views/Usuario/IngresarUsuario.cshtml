@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ingresar Usuario</title>
+</head>
+<body>
+
+    <h1>Registro de Usuario Nuevo</h1>
+    <form method="post" action="~/Usuario/Administrar">
+        
+
+            <table>
+                <tr style="display:none">
+                    <td>IDUSUARIO</td>
+                    <td><input id="idusuario" name="idusuario" value="0" type="text" readonly /></td>
+                </tr>
+                <tr>
+                    <td>NOMBRE</td>
+                    <td><input id="nombre" name="nombre" type="text" placeholder="Nombre" /></td>
+                </tr>
+                <tr>
+                    <td>APELLIDO</td>
+                    <td><input id="apellido" name="apellido" type="text" placeholder="Apellido" /></td>
+                </tr>
+                <tr>
+                    <td>PUESTO</td>
+                    <td><input id="puesto" name="puesto" type="text" placeholder="Puesto" /></td>
+                </tr>
+
+                <tr>
+                    <td>ESTADO</td>
+                    <td><input id="estado" name="estado" type="text" placeholder="Estado" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Registrar" /></td>
+                    <td></td>
+                </tr>
+            </table>
+        
+    </form>
+</body>
+</html>

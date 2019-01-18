@@ -28,6 +28,7 @@ namespace Ferreteria_BE
         }
     
         public virtual DbSet<Producto> Producto { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     
         public virtual int Usp_AdministrarProducto(Nullable<int> idProducto, string descripcion, Nullable<int> tipoProducto, Nullable<int> estado, string usuario)
         {

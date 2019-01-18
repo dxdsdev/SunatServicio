@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Examen_NombreApellidoModelStoreContainer" CdmEntityContainer="Examen_NombreApellidoEntities">
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="Examen_NombreApellidoModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Puesto" ColumnName="Puesto" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginUsuario">
+      <EntityTypeMapping TypeName="Examen_NombreApellidoModel.LoginUsuario">
+        <MappingFragment StoreEntitySet="LoginUsuario">
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Sp_Login" FunctionName="Examen_NombreApellidoModel.Store.Sp_Login" />
+    <FunctionImportMapping FunctionImportName="usp_Listarusuario" FunctionName="Examen_NombreApellidoModel.Store.usp_Listarusuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Examen_NombreApellidoModel.usp_Listarusuario_Result">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Puesto" ColumnName="Puesto" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ListarUsuarios" FunctionName="Examen_NombreApellidoModel.Store.usp_ListarUsuarios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Examen_NombreApellidoModel.usp_ListarUsuarios_Result">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Puesto" ColumnName="Puesto" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_AdministrarUsuario" FunctionName="Examen_NombreApellidoModel.Store.Usp_AdministrarUsuario" />
+  </EntityContainerMapping>
+</Mapping>

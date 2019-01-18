@@ -17,7 +17,7 @@ namespace Sunat_AD
                 return db.ObtenerEmpresaTodas().ToList();
                 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
 
                 return null;
@@ -32,7 +32,7 @@ namespace Sunat_AD
                 return db.ObtenerEmpresa(pIdempresa, pLlave).ToList();
                 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
 
                 return null;
