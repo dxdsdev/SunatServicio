@@ -30,6 +30,14 @@ namespace WebFerreteria.Controllers
             return View("EditarProducto", vlstProducto);
         }
 
+        public ActionResult RegistrarProducto()
+        {
+            
+            return View();
+        }
+
+
+
         [HttpPost]
         public ActionResult Administrar(string Id, string Descripcion, string TipoProducto, string Estado)
         {

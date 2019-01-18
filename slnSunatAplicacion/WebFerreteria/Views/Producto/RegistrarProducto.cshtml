@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RegistrarProducto</title>
+</head>
+<body>
+
+    <form method="post" action="~/Producto/Administrar">
+        
+
+            <table>
+                <tr>
+                    <td>Id</td>
+                    <td><input id="Id" name="Id" value="0" type="text" readonly /></td>
+                </tr>
+                <tr>
+                    <td>Producto</td>
+                    <td><input id="Descripcion" name="Descripcion"  type="text" placeholder="Descripcion" /></td>
+                </tr>
+                <tr>
+                    <td>TipoProducto</td>
+                    <td><input id="TipoProducto" name="TipoProducto" type="text" placeholder="Tipo" /></td>
+                </tr>
+                <tr>
+                    <td>Estado</td>
+                    <td><input id="Estado" name="Estado" type="text" placeholder="Estado" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Actualizar" /></td>
+                    <td></td>
+                </tr>
+            </table>
+        
+    </form>
+</body>
+</html>
